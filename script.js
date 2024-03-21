@@ -19,57 +19,73 @@ function getComputerChoice() {
 
 
 // Play one round of game
-const playerSelection = prompt("Enter choice: rock, paper, scissors:- ").toLowerCase()
-const computerSelection = getComputerChoice();
+
+// Declare score variable
+let computerScore = 0;
+let playerScore = 0;
 
 function playRound(playerSelection, computerSelection)
 {
-
     if (playerSelection == "rock")
     {
         if (computerSelection == "paper")
         {
-            return "You lost! paper beats rock!"
+            computerScore++;
+            return "You lost! paper beats rock!";
         }
         else if (computerSelection == "scissors")
         {
-            return "You won! rock beats paper!"
+            playerScore++;
+            return "You won! rock beats paper!";
         }
         else if (computerSelection == "rock")
         {
-            return "It's a tie!!"
+            return "It's a tie!!";
         }
     }
     if (playerSelection == "paper")
     {
         if (computerSelection == "paper")
         {
-            return "It's a tie!!!"
+            return "It's a tie!!!";
         }
         else if (computerSelection == "scissors")
         {
-            return "You lost! Scissors beats paper!"
+            computerScore++;
+            return "You lost! Scissors beats paper!";
         }
         else if (computerSelection == "rock")
         {
-            return "You won! Paper beats rock!"
+            playerScore++;
+            return "You won! Paper beats rock!";
         }
     }
     if (playerSelection == "scissors")
     {
         if (computerSelection == "paper")
         {
-            return "You won! scissors beats paper!"
+            playerScore++;
+            return "You won! scissors beats paper!";
         }
         else if (computerSelection == "scissors")
         {
-            return "It's a tie!"
+            return "It's a tie!";
         }
         else if (computerSelection == "rock")
         {
-            return "You lost! Rock beats scissors!"
+            computerScore++;
+            return "You lost! Rock beats scissors!";
         }
     }
 }
 
-console.log(playRound(playerSelection, computerSelection));
+
+for (let i=0; i<5; i++)
+{   
+    const playerSelection = prompt("Enter choice: rock, paper, scissors:- ").toLowerCase()
+    const computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+}
+
+console.log("The player score is: " + playerScore);
+console.log("The computer score is: " + computerScore);
