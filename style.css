@@ -3,8 +3,31 @@
     padding: 0px;
 }
 
+body {
+    font-family: Roboto, sans-serif;
+}
+
 .header {
-    height: 200px;
-    width: 400px;
-    background-color: black;
+    padding: 20px 100px;
+    background-color: #2f2fa2;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header .headerTitle{
+    font-size: 50px;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: antiquewhite;
+    
 }
