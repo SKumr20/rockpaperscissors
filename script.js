@@ -79,17 +79,21 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
+
 const playerButtonpress = document.querySelectorAll('.playerButtons button');
 playerButtonpress.forEach(button => {
     button.addEventListener("click", () => {
         const playerSelection = button.id.toLowerCase();
-
         const computerSelection = getComputerChoice();
         
         console.log(playRound(playerSelection, computerSelection));
 
         console.log("The player score is: " + playerScore);
         console.log("The computer score is: " + computerScore);
+
+        const resultBlock = document.querySelector('.resultBlock');
+        const resultBlockText = `The player score is: ${playerScore}`;
+        resultBlock.textContent = resultBlockText;
     })
 })
 
