@@ -79,13 +79,27 @@ function playRound(playerSelection, computerSelection)
     }
 }
 
+const playerButtonpress = document.querySelectorAll('.playerButtons button');
+playerButtonpress.forEach(button => {
+    button.addEventListener("click", () => {
+        const playerSelection = button.id.toLowerCase();
 
-for (let i=0; i<5; i++)
-{   
-    const playerSelection = prompt("Enter choice: rock, paper, scissors:- ").toLowerCase()
-    const computerSelection = getComputerChoice();
-    console.log(playRound(playerSelection, computerSelection));
-}
+        const computerSelection = getComputerChoice();
+        
+        console.log(playRound(playerSelection, computerSelection));
 
-console.log("The player score is: " + playerScore);
-console.log("The computer score is: " + computerScore);
+        console.log("The player score is: " + playerScore);
+        console.log("The computer score is: " + computerScore);
+    })
+})
+
+
+// for (let i=0; i<5; i++)
+// {   
+//     const playerSelection = prompt("Enter choice: rock, paper, scissors:- ").toLowerCase();
+//     const computerSelection = getComputerChoice();
+//     console.log(playRound(playerSelection, computerSelection));
+// }
+
+// console.log("The player score is: " + playerScore);
+// console.log("The computer score is: " + computerScore);
