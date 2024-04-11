@@ -96,7 +96,7 @@ a {
 }
 
 .playerButtons button{
-    font-size: 50px;
+    font-size: 60px;
     border: solid #282828 2px;
     border-radius: 10px;
 }
@@ -117,7 +117,7 @@ a {
 }
 
 .computerButtons button{
-    font-size: 50px;
+    font-size: 60px;
     border: solid #282828 2px;
     border-radius: 10px;
 }
